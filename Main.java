@@ -30,11 +30,7 @@ public class Main {
         System.out.println(oppositeHouse(5, 46));
     }
     public static int oppositeHouse(int num, int len){
-        if (num % 2 == 1){
-            return (len * 2) - (num - 1);
-        }else{
-            return len * 2 - 1 - (num - 2);
-        }
+        return (len * 2) + 1 - num;
     }
     static void task2() {
         System.out.println(nameShuffle("Donald Trump"));
@@ -163,11 +159,7 @@ public class Main {
                 countO++;
             }
         }
-        if (countO == countX) {
-            return true;
-        }else{
-            return false;
-        }
+        return (countO == countX);
     }
     static void task9(){
         System.out.println(bomb("There is a bomb."));
@@ -202,10 +194,7 @@ public class Main {
         System.out.println(sameAscii("EdAbIt", "EDABIT"));
     }
     public static boolean sameAscii(String str1, String str2){
-        if (getAsciiSum(str1) == getAsciiSum(str2)){
-            return true;
-        }
-        return false;
+        return (getAsciiSum(str1) == getAsciiSum(str2));
     }
     public static int getAsciiSum(String str){
         int sum = 0;
